@@ -1,12 +1,13 @@
 !!! 5
 %html
-%head
-  %title The Discipline of Organizing
-  = stylesheet_link_tag    "application", :media => "all"
-  = javascript_include_tag "application"
-  = csrf_meta_tags
+  %head
+    %title The Discipline of Organizing
+    = stylesheet_link_tag    "application", :media => "all"
+    = javascript_include_tag "application"
+    = csrf_meta_tags
 
-%body
-  %p.notice= notice
-  %p.alert= alert
-  = yield
+  %body
+    #main{ :role => "main" }
+      %p.notice= notice
+      %p.alert= alert
+      = yield

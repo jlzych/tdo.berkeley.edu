@@ -1,0 +1,76 @@
+/*
+ * This is a manifest file that'll be compiled into application.css, which will include all the files
+ * listed below.
+ *
+ * Any CSS and SCSS file within this directory, lib/assets/stylesheets, vendor/assets/stylesheets,
+ * or vendor/assets/stylesheets of plugins, if any, can be referenced here using a relative path.
+ *
+ * You're free to add application-wide styles to this file and they'll appear at the top of the
+ * compiled file, but it's generally better to create a new file per style scope.
+ *
+ *= require normalize
+ *= require_self
+ *= require_tree .
+ */
+
+@import compass
+@import "fonts"
+
+*
+  +box-sizing(border-box)
+
+body
+  //background-color: #F4EEE1
+  background-image: url(http://subtlepatterns.com/patterns/lightpaperfibers.png)
+  font-size: 17px
+  line-height: 1.4em
+  margin: 0
+
+#main
+  padding: 0 15%
+  padding-bottom: 15%
+  font-family: "Cardo", Georgia, "Times New Roman", serif
+  color: #444
+
+h1, h2, h3
+  font-family: "BebasNeueRegular", Helvetica, Arial, sans-serif
+  font-weight: normal
+  line-height: 1.1em
+  color: black
+
+// http://modularscale.com/scale/?px1=18&px2=56&ra1=1.5&ra2=0
+h1
+  font-size: 3.1em
+h2
+  font-size: 2.25em
+h3
+  font-size: 1.5em
+
+.cover
+  background-color: #ddd
+  float: left
+  display: inline-block
+  width: 250px
+  height: 307px
+  margin-right: 1em
+.about
+  min-height: 307px /* Remove */
+
+.authors
+  display: table
+  width: 100%
+  h2
+    margin-bottom: 0
+  .author_row
+    display: table-row
+    .author
+      display: table-cell
+      width: 50%
+      &:nth-child(1)
+        padding-right: 1em
+      &:nth-child(2)
+        padding-left: 1em
+      img
+        float: left
+        width: 125px
+        margin-right: 1em
