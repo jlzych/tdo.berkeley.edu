@@ -21,19 +21,23 @@
 
 body
   //background-color: #F4EEE1
-  background-image: url(http://subtlepatterns.com/patterns/lightpaperfibers.png)
+  // background-image: url(http://www.mattgemmell.com/images/noise.png?1326131369)
+  // Modified from this original: http://subtlepatterns.com/light-toast/
+  background-image: url(sepia_toast.png)
   font-size: 17px
-  line-height: 1.4em
+  line-height: 1.5em
   margin: 0
 
 #main
+  min-width: 960px
   padding: 0 15%
-  padding-bottom: 15%
+  //padding-bottom: 15%
   font-family: "Cardo", Georgia, "Times New Roman", serif
   color: #444
 
 h1, h2, h3
-  font-family: "BebasNeueRegular", Helvetica, Arial, sans-serif
+  position: relative
+  font-family: "BebasNeueRegular", Impact, Helvetica, Arial, sans-serif
   font-weight: normal
   line-height: 1.1em
   color: black
@@ -43,21 +47,40 @@ h1
   font-size: 3.1em
 h2
   font-size: 2.25em
+  margin-top: .4em
 h3
   font-size: 1.5em
 
+// section > h2::after
+//   content: ''
+//   position: absolute
+//   margin-left: 1em
+//   width: 100%
+//   height: 45%
+//   border-bottom: 2px solid rgba(99, 79, 42, 1)
+
+a
+  color: #294283
+  &:hover
+    text-decoration: none
+
+section
+  margin-bottom: 2em
+
 .cover
-  background-color: #ddd
+  background-color: rgba(99, 79, 42, 0.4)
   float: left
   display: inline-block
-  width: 250px
-  height: 307px
+  width: 200px
+  height: 250px
   margin-right: 1em
 .about
-  min-height: 307px /* Remove */
-
+  min-height: 350px // Remove
+.toc
+  border-top: 2px solid rgba(99, 79, 42, .4)
 .authors
   display: table
+  border-top: 2px solid rgba(99, 79, 42, .4)
   width: 100%
   h2
     margin-bottom: 0
@@ -74,3 +97,10 @@ h3
         float: left
         width: 125px
         margin-right: 1em
+
+footer
+  margin-bottom: 1em
+  margin-top: 15%
+  font-size: .75em
+  font-style: italic
+  color: #666
