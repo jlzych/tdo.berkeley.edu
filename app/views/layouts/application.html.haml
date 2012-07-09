@@ -10,6 +10,7 @@
     #main{ :role => "main" }
       %p.notice= notice
       %p.alert= alert
+      %p.error= flash[:error]
       = yield
       %footer
         &copy; #{Time.now.year} UC Berkeley

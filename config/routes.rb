@@ -1,10 +1,17 @@
 TdoBerkeleyEdu::Application.routes.draw do
 
-  devise_for :users
-
   root :to => 'home#index'
 
-  match "book" => 'book#index', :as => :book_index
+  devise_for :users
+
+  match "book" => 'book#index' #, :as => :book_index
+
+  resources :user
+
+  # Admin routes
+  match "admin" => 'admin#index'
+  match "admin/new_user" => 'admin#new_user', :as => :new_user
+  match "admin/create_user" => 'admin#create_user', :as => :create_user, :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

@@ -1,2 +1,4 @@
 %h1 Book#index
 %p This is where the book will live!
+
+%p= link_to("Admin", admin_path) if current_user.admin?
