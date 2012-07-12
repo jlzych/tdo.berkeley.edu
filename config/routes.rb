@@ -1,5 +1,7 @@
 TdoBerkeleyEdu::Application.routes.draw do
 
+  mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
+
   root :to => 'home#index'
 
   devise_for :users
@@ -9,9 +11,9 @@ TdoBerkeleyEdu::Application.routes.draw do
   resources :user
 
   # Admin routes
-  match "admin" => 'admin#index'
-  match "admin/new_user" => 'admin#new_user', :as => :new_user
-  match "admin/create_user" => 'admin#create_user', :as => :create_user, :via => :post
+  # match "admin" => 'admin#index'
+  # match "admin/new_user" => 'admin#new_user', :as => :new_user
+  # match "admin/create_user" => 'admin#create_user', :as => :create_user, :via => :post
 
   # The priority is based upon order of creation:
   # first created -> highest priority.

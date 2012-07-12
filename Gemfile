@@ -26,6 +26,8 @@ gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
 gem 'devise'
+gem 'fastercsv' # Only with Ruby 1.8
+gem 'rails_admin'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
