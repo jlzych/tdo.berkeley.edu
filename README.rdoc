@@ -1,3 +1,3 @@
-# The Disicpline of Organizing
+== The Disicpline of Organizing
 
 This is the source code for "The Discipline of Organizing" (tdo.berkeley.edu), which acts as a living document for the book.
