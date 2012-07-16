@@ -10,7 +10,8 @@
  *
  *= require normalize
  *= require_self
- *= require_tree .
+ *= require_directory .
+ * Above line only grabs files in the directory, not subdirectories: http://mrdanadams.com/2011/exclude-active-admin-js-css-rails/
  */
 
 @import compass
@@ -40,6 +41,7 @@ h1, h2, h3
   font-family: "BebasNeueRegular", Impact, Helvetica, Arial, sans-serif
   font-weight: normal
   line-height: 1.1em
+  margin-bottom: .4em
   color: black
 
 // http://modularscale.com/scale/?px1=18&px2=56&ra1=1.5&ra2=0
@@ -47,7 +49,7 @@ h1
   font-size: 3.1em
 h2
   font-size: 2.25em
-  margin-top: .4em
+  //margin-top: .4em
 h3
   font-size: 1.5em
 
@@ -63,6 +65,8 @@ a
   color: #294283
   &:hover
     text-decoration: none
+  h1 &
+    color: inherit
 
 section
   margin-bottom: 2em

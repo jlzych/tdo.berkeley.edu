@@ -3,6 +3,7 @@ TdoBerkeleyEdu::Application.routes.draw do
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
   root :to => 'home#index'
+  match "about" => 'home#about'
 
   devise_for :users
 

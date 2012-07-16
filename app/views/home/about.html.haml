@@ -1,0 +1,56 @@
+%article
+  %h1=link_to "The Discipline of Organizing", root_path, :title => "Home"
+
+  %section#motivation
+    %h2 Motivation
+    %p The Discipline of Organizing evolved after several years teaching a master’s level university course on  &ldquo;Information Organization &amp; Retrieval&rdquo; at the University of California, Berkeley’s School of Information. &ldquo;Organizing&rdquo; is a fundamental activity in many disciplines, most notably library and information science, computer science, informatics, law, economics, and business. However, these disciplines have only limited agreement in how they approach and describe problems of organizing and in what they seek as their solutions. For example, library and information science has traditionally studied organizing from a public sector bibliographic perspective, paying careful attention to user requirements for access and preservation, and offering prescriptive methods and solutions. In contrast, computer science and informatics tend to study organizing in the context of information-intensive business applications with a focus on algorithmic efficiency, system architecture and implementation.
+
+    %p My goal with the book was to synthesize insights from these many disciplines to provide my students with a richer understanding about information organization and retrieval than any one discipline could provide. I came to realize that information was just one type of resource to organize and that it would be beneficial to think about organizing in a more abstract way – as a system that integrates the concerns often treated separately as &ldquo;organization&rdquo; and &ldquo;retrieval.&rdquo;
+
+    %p This book presents a framework for issues and problems that arise when organizing. It emphasizes the common concepts and goals of the disciplines that study them. The central idea is that of an Organizing System, an intentionally arranged collection of resources and the interactions they support.
+
+    %p A secondary goal was to broaden the conventional focus of library science on the public-sector bibliographic domain to include organizing systems from many additional areas with different types of resources to organize. Nevertheless, while the book discusses many issues that new contexts and new technologies introduce, it is NOT a technology-driven application survey of current practice. The book maintains a rigorous conceptual and theoretical focus to create a foundation on which to apply concepts to new contexts, systems, and technologies.
+
+  %section#collaboration
+    %h2 Collaboration
+    %p This book began as the lecture notes from my Berkeley course, but I soon realized that a book motivated by the goal of bringing together different disciplines in a comprehensive yet minimalist way would be very challenging to write. So I enlisted numerous collaborators, and the book is now the product of countless discussions with students and faculty colleagues at Berkeley and other schools. The manuscript has been extensively revised as a result of its use in my Berkeley course in 2010 and 2011 and in 2011 courses at the University of North Carolina and at Humboldt University in Berlin. We expect a few other schools to be trialing the manuscript in the fall of 2012.
+
+    %p Most of the 10 chapters in the book have numerous co-authors, and while I am the first author of a majority of the chapters, I also am serving as the editor of the book – not in the conventional pro forma way of merely soliciting and assembling the contributed chapters, but to ensure that a book with a dozen named contributors is as coherent and tight as any single-authored book might be.
+
+    %p We have thought since the beginning of this project that this book should not just be a conventional text. A printed book is an intellectual snapshot that is already dated in many respects the day it is published. In addition, the pedagogical goal of this book is made more difficult by the relentless pace of technology innovation in our information-intensive economy and culture. But we think that the emergence of ebook publishing opens up innovative possibilities, and we are creating a living repository of content that can be collaboratively maintained, evolved, customized and republished in ebook formats.
+
+    %p &ldquo;A living repository for collaboration&rdquo; is not just a cliché here. We have been experimenting with this idea for over a year. The multi-disciplinary multi-campus collaboration needed to create this book has grown broader over time to include discussion and sharing of lecture notes, course assignments, and exam questions. In addition, student created-content such as course-related blog posts and commentary has also been shared between schools using the book. In addition to email, we are using Dropbox, Skype, Google Plus and other collaboration technologies with some success to coordinate across campuses.
+
+  %section#customization
+    %h2 Customization
+    %p We are proposing the discipline of organizing as the intersection of library science and computer science, but for a long time we found ourselves writing a book that was more like their union. We thought it was necessary to include many examples and details from each discipline to ensure that the book would be appealing and credible. But over time this writing philosophy made the manuscript longer and longer and undermined its conceptual coherence.
+
+    %p So we have recently adopted an innovative approach that allows the book to focus on the core ideas that bridge the different organizing disciplines while enabling it to satisfy the somewhat different topical needs of academic programs in library science and computer science or informatics.
+
+    %p The essence of our new authoring approach is to write a &ldquo;lean&rdquo; main text and to push much of the domain-specific content into supporting notes. We expect that about 25% of the content will be moved into notes in this way. There won't be any footnote or endnote markers in the printed text to distract readers, leaving a text that focuses on the core ideas about organizing systems that cut across the many disciplines that create them. In ebook formats, however, the notes can seamlessly be incorporated into the text.
+
+    %p The key innovation that enables robust customization is the tagging or classification of notes according to issue or domain. Some notes are untagged and explain references or provide additional detail that isn’t particularly domain-dependent. However, notes tagged as [LIS Note] contain details of most interest to readers interested in library and information science, and those tagged as [Technology Note] contain details about technology or implementation more of interest to computer science or informatics readers.
+
+    %p Here’s an example sentence and its associated [LIS Note] that cites a classic LIS reference.
+
+    %blockquote
+      &hellip; libraries and similar Organizing Systems implement catalogs to enable interactions for finding a known resource, identifying any resource in the collection, and discriminating or selecting among similar resources.
+      %p [LIS Note] The four objectives listed in this paragraph as those proposed in 1997 by the International Federation of Library Associations and Institutions (IFLA). The first statement of the objectives for a bibliographic system was made by Cutter (1876), which Svenonius (2000) says it is likely the most cited text in the bibliographic literature. Cutter called his three objectives &ldquo;finding,&rdquo; &ldquo;co-locating,&rdquo; and &ldquo;choice.&rdquo;
+
+    %p Similarly, here’s a paragraph and an associated [Technology Note] that is probably of less interest to a LIS reader:
+
+    %blockquote
+      The Organizing System for a small collection can sometimes use only the minimal or default organizing principle of &ldquo;co-location&rdquo; – putting all the resources in the same container, on the same shelf, or in the same email inbox. If you don’t cook much and have only a small number of spices in your kitchen, you don’t need to alphabetize them because it is easy to find the one you want. It probably is the case that an organizing principle of &ldquo;frequency of use&rdquo; is implemented over time as the spices used most often end up in front.
+      %p [Technology Note] For collections of non-trivial size the choice of searching or sorting algorithm is a critical design decision because they differ greatly in the time they take to complete and the storage space they require. For example, if the collection is arranged in an unorganized or random manner (as a &ldquo;pile&rdquo;) and every resource must be examined, the time to find a particular item increases linearly with the collection size. If the collection is maintained in an ordered manner, a binary search algorithm can locate any item in a time proportional to the logarithm of the number of items. Analysis of algorithms is a fundamental topic in computer science; a popular textbook is &ldquo;Introduction to Algorithms&rdquo; by Thomas Cormen et al (2009).
+
+    %p We are developing publishing machinery for creating ebooks from our manuscript files authored in Microsoft Word that can selectively include tagged notes. The mechanism is completely general, so in addition to [LIS Note] or [Technology Note], we could have [Glushko Note], [Berkeley Note], [Law Note], or any other classification that any instructor or institution using the material might find useful.
+
+    %p We are working on making this customization dynamic - by using HTML5 / CSS / Javascript in the ebooks -- so you can almost imagine reading the book with a dial that says &ldquo;more detail here&rdquo; or &ldquo;more technology detail here&rdquo; and so on as you move through the book.
+
+  %section#deployment
+    %h2 Deployment/Curation
+    %p We expect to complete the manuscript in the summer of 2012 and will make it freely available in pdf format to anyone interested in trialing the material in fall 2012 courses. We also expect to be developing several ebook versions in the fall of 2012 and will probably make them available, but we would not want potential adopters to count on that.
+
+    %p The book will be available in print in January or February 2013 (we are targeting the ISchools conference in Fort Worth, TX in February for a &ldquo;release party&rdquo;). We will simultaneously make the book available in pdf format and as ebooks. The former will be completely free to anyone to use as is. (We have registered DisciplineOfOrganizing.org to serve as the distribution point for the digital versions).
+
+    %p The ebooks, and the ability to customize them, will be available through some kind of site licensing arrangement that is yet to be determined. The repository of book content, course materials, assignments, etc., will be hosted at Berkeley and I will serve as the curator for a period of at least two years. We will also provide technical guidance and support for authoring and customization. Most of the publishing system will made available through dita4publishers.sourceforge.net.
