@@ -25,6 +25,7 @@ end
 gem 'jquery-rails'
 gem 'haml'
 gem 'haml-rails'
+gem 'bootstrap-sass', '~> 2.0.4.0'
 gem 'devise'
 gem 'fastercsv' # Only with Ruby 1.8
 gem 'rails_admin'

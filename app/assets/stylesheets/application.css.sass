@@ -17,6 +17,19 @@
 @import compass
 @import "fonts"
 
+// Bootstrap overrides
+$baseFontSize: 17px
+$baseFontFamily: "Cardo", Georgia, "Times New Roman", serif
+$baseLineHeight: 25px
+$headingsFontFamily: "BebasNeueRegular", Impact, Helvetica, Arial, sans-serif
+$headingsFontWeight: normal
+$blue: #294283
+$linkColor: $blue
+$linkColorHover: $blue
+$btnPrimaryBackground: #08c
+
+@import "bootstrap"
+
 *
   +box-sizing(border-box)
 
@@ -25,23 +38,24 @@ body
   // background-image: url(http://www.mattgemmell.com/images/noise.png?1326131369)
   // Modified from this original: http://subtlepatterns.com/light-toast/
   background-image: url(sepia_toast.png)
-  font-size: 17px
-  line-height: 1.5em
+  font-size: $baseFontSize
+  line-height: $baseLineHeight
   margin: 0
 
 #main
   min-width: 960px
   padding: 0 15%
+  padding-top: 1em
   //padding-bottom: 15%
-  font-family: "Cardo", Georgia, "Times New Roman", serif
+  font-family: $baseFontFamily
   color: #444
 
 h1, h2, h3
   position: relative
-  font-family: "BebasNeueRegular", Impact, Helvetica, Arial, sans-serif
-  font-weight: normal
+  font-family: $headingsFontFamily
+  font-weight: $headingsFontWeight
   line-height: 1.1em
-  margin-bottom: .4em
+  margin: .4em 0
   color: black
 
 // http://modularscale.com/scale/?px1=18&px2=56&ra1=1.5&ra2=0
@@ -49,7 +63,6 @@ h1
   font-size: 3.1em
 h2
   font-size: 2.25em
-  //margin-top: .4em
 h3
   font-size: 1.5em
 
@@ -63,23 +76,40 @@ h3
 
 a
   color: #294283
+  text-decoration: underline
   &:hover
     text-decoration: none
   h1 &
     color: inherit
+  .btn &, &.btn
+    text-decoration: none
 
 section
   margin-bottom: 2em
 
+// Bootstrap override
+.well
+  background-color: rgba(255,255,255,0.5)
+
+// Generic table layout
+.table
+  display: table
+.table-row
+  display: table-row
+.table-cell
+  display: table-cell
+
+// Index elements
+.callout
+  width: 14em
+.about_text
+  padding-left: 1em
 .cover
   background-color: rgba(99, 79, 42, 0.4)
-  float: left
-  display: inline-block
-  width: 200px
-  height: 250px
-  margin-right: 1em
-.about
-  min-height: 350px // Remove
+  height: 17em
+.get_book
+  margin-top: 1em
+  margin-bottom: 0
 .toc
   border-top: 2px solid rgba(99, 79, 42, .4)
 .authors
@@ -101,6 +131,10 @@ section
         float: left
         width: 125px
         margin-right: 1em
+
+// Forms
+form .btn
+  margin-top: 1em
 
 footer
   margin-bottom: 1em

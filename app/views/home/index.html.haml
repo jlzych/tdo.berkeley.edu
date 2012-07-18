@@ -1,21 +1,21 @@
 %section#about.about
   %h1 The Discipline of Organizing
-  .about_text
-    .cover
-    %p We organize things, we organize information, we organize information about things, and we organize information about information. But even though &ldquo;organizing&rdquo; is a fundamental and ubiquitous challenge, when we compare these activities their contrasts are more apparent than their commonalities. As a result different concepts and methods have evolved that are embodied in the disciplines of library science, publishing and content management, business process analysis, data science, information systems design, computer science, and other fields. These fields don’t always agree in how they approach problems of organizing, the words they use to describe what they do, and in what they seek as solutions.
+  .table
+    .callout.table-cell
+      .cover
+        %h3{ :style => "color: rgba(0,0,0,.5)"} Cover
 
-    %p
-      We propose to unify many perspectives about organizing with the concept of an Organizing System, defined as
-      %em an intentionally arranged collection of resources and the interactions they support.
-      Every Organizing System involves a collection of resources, a choice of properties or principles used to describe and arrange resources, and ways of supporting interactions with resources. By comparing and contrasting how these activities take place in different contexts and domains, we can identify patterns of organizing. We can create a discipline of organizing in a disciplined way.
 
-    %p This work to develop the Discipline of Organizing is the collective effort of a score of professors and graduate students from several institutions, and will result in a textbook targeted for the “core” or “gateway” courses in professional schools for library science, informatics, and other related areas. This book will be published in early 2013 simultaneously as a printed book, as an ebook, and as an open content repository to support collaborative use and maintenance of the content by all of the schools using it.
+    .about_text.table-cell
+      %p
+        We organize things, we organize information, we organize information about things, and we organize information about information. But even though &ldquo;organizing&rdquo; is a fundamental and ubiquitous challenge, when we compare these activities their contrasts are more apparent than their commonalities. We propose to unify many perspectives about organizing with the concept of an Organizing System, defined as
+        %em an intentionally arranged collection of resources and the interactions they support.
+        Every Organizing System involves a collection of resources, a choice of properties or principles used to describe and arrange resources, and ways of supporting interactions with resources. By comparing and contrasting how these activities take place in different contexts and domains, we can identify patterns of organizing. We can create a discipline of organizing in a disciplined way.
 
-    =link_to "Read more about the project.", about_path
-
-    %p.get_book
-      =link_to "View chapter 1", "#"
-      =link_to "Read the book online", book_path
+      %p=link_to "Read more about the project &raquo;".html_safe, about_path
+      %p
+        =link_to "Read chapter 1", "#", :class => "btn btn-primary"
+        =link_to "Access the book online", book_path, :class => "btn"
 
 %section#toc.toc
   %h2 Table of Contents

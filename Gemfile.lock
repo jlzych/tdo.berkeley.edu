@@ -154,6 +154,7 @@ PLATFORMS
   ruby
 
 DEPENDENCIES
+  bootstrap-sass (~> 2.0.4.0)
   coffee-rails (~> 3.2.1)
   compass-rails
   devise

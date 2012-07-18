@@ -10,9 +10,14 @@
     #main{ :role => "main" }
       %p.logout{ :style => "text-align: right;" }=link_to('Logout', destroy_user_session_path, :method => :delete) if user_signed_in?
 
-      %p.notice= notice
-      %p.alert= alert
-      %p.error= flash[:error]
+      -if notice
+        %p.alert.alert-info= notice
+      -if alert
+        %p.alert= alert
+
+      -if flash[:error]
+        %p.alert.alert-error= flash[:error]
+
       = yield
       %footer
         &copy; #{Time.now.year} UC Berkeley
