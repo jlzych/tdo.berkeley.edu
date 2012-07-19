@@ -1,0 +1,57 @@
+html{
+  width: 600px;
+  padding: 30px 100px 30px 100px;
+}
+
+body{
+  font-family: "Georgia";
+  font-size: 14px;
+  background: white;
+}
+
+header{  
+  height: 40px;
+  margin: 0 0 0 0;
+  position:fixed;
+  top: 50px;
+  left:20px;
+  background: white;
+}
+
+section{
+  margin-bottom: 50px;
+}
+
+div{
+  margin-bottom: 10px;
+}
+
+#space{
+  height: 30px;
+}
+
+.quoted{
+  font-style: italic;
+  margin: 0 120px 30px 120px;
+}
+
+.sidebar_div{
+  margin: 20px 0 40px 0;
+  padding:15px 55px;
+  background: rgba(240,240,240,.10);
+  border: 2px solid grey;
+  border-radius: 50px 0 50px 0;
+  box-shadow: 10px 10px 20px #ccc;
+}
+
+.LIS{
+  background: rgba(160,200,252,.15);
+}
+
+.typeless{
+  background: rgba(228,250,134,.15);
+}
+
+.citation{
+ background: rgba(255,235,124,.15);  
+}

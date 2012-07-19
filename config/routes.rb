@@ -1,13 +1,14 @@
 TdoBerkeleyEdu::Application.routes.draw do
+  root :to => 'home#index'
 
   mount RailsAdmin::Engine => '/admin', :as => 'rails_admin'
 
-  root :to => 'home#index'
-  match "about" => 'home#about'
+  match 'about' => 'home#about'
 
   devise_for :users
 
-  match "book" => 'book#index' #, :as => :book_index
+  resources :book, :only => [:index, :show]
+  match "book/chapter/:id" => 'book#chapter', :via => :get, :as => :book_chapter
 
   resources :user
 

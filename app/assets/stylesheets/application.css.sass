@@ -12,6 +12,7 @@
  *= require_self
  *= require_directory .
  * Above line only grabs files in the directory, not subdirectories: http://mrdanadams.com/2011/exclude-active-admin-js-css-rails/
+ * Necessary to exclude rails_admin theme CSS
  */
 
 @import compass
@@ -79,7 +80,7 @@ a
   text-decoration: underline
   &:hover
     text-decoration: none
-  h1 &
+  h1 &, h3 &
     color: inherit
   .btn &, &.btn
     text-decoration: none
@@ -142,3 +143,11 @@ footer
   font-size: .75em
   font-style: italic
   color: #666
+
+// Comments
+.comment_input
+  width: 50%
+
+.author
+  font-style: italic
+  font-size: .8em

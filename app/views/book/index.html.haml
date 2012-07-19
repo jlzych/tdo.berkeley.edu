@@ -1,4 +1,10 @@
-%h1 Book#index
-%p This is where the book will live!
+%h1 The Discipline of Organizing
+
+%ol
+  %li=link_to "Foundations for Organizing Systems", book_path("1")
+  %li=link_to "The Activities in Organizing Systems", book_path("1")
+  %li=link_to "Design Patterns for Organizing Systems", book_path("1")
+  %li=link_to "Resources", book_path("1")
+  %li=link_to "Describing Resources", book_path("1")
 
 %p= link_to("Admin", rails_admin_path) if current_user.admin?
