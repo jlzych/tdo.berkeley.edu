@@ -11,6 +11,7 @@ end
 
 group :production do
   gem 'mysql', '~> 2.8.1'
+  gem "therubyracer", :require => 'v8' # Required for execjs, OS X has a runtime installed by default
 end
 
 gem 'json'
