@@ -1,10 +1,8 @@
-%h1 The Discipline of Organizing
+%h1=link_to 'The Discipline of Organizing', root_path
 
 %ol
-  %li=link_to "Foundations for Organizing Systems", book_path("1")
-  %li=link_to "The Activities in Organizing Systems", book_path("1")
-  %li=link_to "Design Patterns for Organizing Systems", book_path("1")
-  %li=link_to "Resources", book_path("1")
-  %li=link_to "Describing Resources", book_path("1")
-
-%p= link_to("Admin", rails_admin_path) if current_user.admin?
+  %li=link_to 'Foundations for Organizing Systems', book_path('1')
+  %li=link_to 'The Activities in Organizing Systems', book_path('1')
+  %li=link_to 'Design Patterns for Organizing Systems', book_path('1')
+  %li=link_to 'Resources', book_path('1')
+  %li=link_to 'Describing Resources', book_path('1')

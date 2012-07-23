@@ -7,8 +7,13 @@
     = csrf_meta_tags
 
   %body
-    #main{ :role => "main" }
-      %p.logout{ :style => "text-align: right;" }=link_to('Logout', destroy_user_session_path, :method => :delete) if user_signed_in?
+    #main{ :role => 'main' }
+      - if user_signed_in?
+        %p.logout_container
+          - if current_user.admin?
+            =link_to('Admin', rails_admin_path, :class => 'rails_admin_path')
+            |
+          =link_to('Logout', destroy_user_session_path, :method => :delete)
 
       -if notice
         %p.alert.alert-info= notice
