@@ -1,8 +1,25 @@
 %h1=link_to 'The Discipline of Organizing', root_path
 
-%ol
-  %li=link_to 'Foundations for Organizing Systems', book_path('1')
-  %li=link_to 'The Activities in Organizing Systems', book_path('1')
-  %li=link_to 'Design Patterns for Organizing Systems', book_path('1')
-  %li=link_to 'Resources', book_path('1')
-  %li=link_to 'Describing Resources', book_path('1')
+#resources_container.table
+  .chapters.table-cell.well
+    %h2 Chapters
+    %ol
+      %li=link_to 'Foundations for Organizing Systems', book_path('1')
+      %li=link_to 'Activities in Organizing Systems', book_path('1')
+      %li=link_to 'Resources in Organizing Systems', book_path('1')
+      %li=link_to 'Resource Description and Metadata', book_path('1')
+      %li=link_to 'Describing Relationships and Structures', book_path('1')
+      %li=link_to 'Categorization:  Describing Resource Classes and Types', book_path('1')
+      %li=link_to 'Classification:  Assigning Resources to Categories', book_path('1')
+      %li=link_to 'The Forms of Resource Descriptions', book_path('1')
+      %li=link_to 'Interactions with Resources', book_path('1')
+
+  .shared_resources.table-cell.well
+    %h2 Shared Resources
+    %p{ :style => 'color: #666; font-style: italic;' } Lecture notes, recordings, and other content will be coming soon.
+    -# %ul
+      -# %li
+        -# Also .icon-picture, .icon-music OR .icon-headphones, .icon-film
+        -# %i.icon-file
+        -# =link_to 'Lecture Notes', '#'
+

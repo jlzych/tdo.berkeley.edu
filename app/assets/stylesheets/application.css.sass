@@ -88,6 +88,15 @@ a
 section
   margin-bottom: 2em
 
+// Holds the logout and admin links in the top-right corner
+// TODO conflicts with notifications (i.e. sits atop them)
+.logout_container
+  float: right
+  font-size: .8em
+  a
+    color: #444
+    font-family: $sansFontFamily
+
 // Bootstrap override
 .well
   background-color: rgba(255,255,255,0.5)
@@ -100,45 +109,6 @@ section
 .table-cell
   display: table-cell
 
-.logout_container
-  float: right
-  font-size: .8em
-  a
-    font-family: $sansFontFamily
-
-// Index elements
-.callout
-  width: 14em
-.about_text
-  padding-left: 1em
-.cover
-  background-color: rgba(99, 79, 42, 0.4)
-  height: 17em
-.get_book
-  margin-top: 1em
-  margin-bottom: 0
-.toc
-  border-top: 2px solid rgba(99, 79, 42, .4)
-.authors
-  display: table
-  border-top: 2px solid rgba(99, 79, 42, .4)
-  width: 100%
-  h2
-    margin-bottom: 0
-  .author_row
-    display: table-row
-    .author
-      display: table-cell
-      width: 50%
-      &:nth-child(1)
-        padding-right: 1em
-      &:nth-child(2)
-        padding-left: 1em
-      img
-        float: left
-        width: 125px
-        margin-right: 1em
-
 // Forms
 form .btn
   margin-top: 1em
@@ -149,11 +119,3 @@ footer
   font-size: .75em
   font-style: italic
   color: #666
-
-// Comments
-.comment_input
-  width: 50%
-
-.author
-  font-style: italic
-  font-size: .8em

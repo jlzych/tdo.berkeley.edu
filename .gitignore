@@ -13,3 +13,6 @@
 # Ignore all logfiles and tempfiles.
 /log/*.log
 /tmp
+
+# Exclude database.yml because it contains plaintext pw
+/config/database.yml

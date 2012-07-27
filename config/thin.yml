@@ -1,0 +1,8 @@
+---
+user: jlzych
+chdir: /groups/tdo/public_html.ssl/tdo.berkeley.edu
+log: log/thin.log
+port: 8010
+environment: production
+pid: tmp/pids/thin.pid
+servers: 3
