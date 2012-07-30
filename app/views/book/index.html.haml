@@ -1,5 +1,16 @@
 %h1=link_to 'The Discipline of Organizing', root_path
 
+%p
+  We consider these chapters to be ready to use in Fall 2012 courses; check back after August 10 for the
+  =link_to 'syllabus', '#'
+  from Bob Glushko’s course at Berkeley.
+%p Chapters 7-9 should be available by the end of August and Chapter 10 by mid-September, well before you would need to use them in a fall semester course. We will continue to revise the book until the end of October.
+%p
+  Send comments to
+  =mail_to "tdo@ischool.berkeley.edu", "tdo@ischool.berkeley.edu"
+
+%p We are developing ebook versions of these chapters, and we also invite you to send us images, videos, news items, or other content for possible incorporation in the ebooks.
+
 #resources_container.table
   .chapters.table-cell.well
     %h2 Chapters
@@ -10,13 +21,16 @@
       %li=link_to 'Resource Description and Metadata', book_path('1')
       %li=link_to 'Describing Relationships and Structures', book_path('1')
       %li=link_to 'Categorization:  Describing Resource Classes and Types', book_path('1')
-      %li=link_to 'Classification:  Assigning Resources to Categories', book_path('1')
-      %li=link_to 'The Forms of Resource Descriptions', book_path('1')
-      %li=link_to 'Interactions with Resources', book_path('1')
+      %li Classification:  Assigning Resources to Categories
+      %li The Forms of Resource Descriptions
+      %li Interactions with Resources
+      %li A Roadmap for Organizing Systems
 
   .shared_resources.table-cell.well
     %h2 Shared Resources
-    %p{ :style => 'color: #666; font-style: italic;' } Lecture notes, recordings, and other content will be coming soon.
+    %p{ :style => 'color: #666; font-style: italic;' } More lecture notes, recordings, assignments, and other content will be coming soon.
+
+    =link_to "Overview of Discipline of Organizing (Glushko presentation May 2012)", "assets/TDO-Introduction.pdf"
     -# %ul
       -# %li
         -# Also .icon-picture, .icon-music OR .icon-headphones, .icon-film

@@ -1,5 +1,10 @@
 %h2 Sign in
 
+%p
+  If you'd like to consider using the book in the fall of 2012, contact
+  =mail_to "glushko@ischool.berkeley.edu", "glushko@ischool.berkeley.edu"
+  for login credentials.
+
 =form_for(resource, :as => resource_name, :url => session_path(resource_name)) do |f|
   =f.label :email
   =f.email_field :email
