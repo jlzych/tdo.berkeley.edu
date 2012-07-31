@@ -7,8 +7,9 @@ TdoBerkeleyEdu::Application.routes.draw do
 
   devise_for :users
 
+  match 'book/syllabus' => 'book#syllabus', :via => :get, :as => :syllabus
   resources :book, :only => [:index, :show]
-  match "book/chapter/:id" => 'book#chapter', :via => :get, :as => :book_chapter
+  match 'book/chapter/:id' => 'book#chapter', :via => :get, :as => :book_chapter
 
   resources :user
 
