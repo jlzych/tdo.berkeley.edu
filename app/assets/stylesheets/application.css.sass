@@ -24,6 +24,7 @@ $baseFontFamily: "Cardo", Georgia, "Times New Roman", serif
 $baseLineHeight: 25px
 $headingsFontFamily: "BebasNeueRegular", Impact, Helvetica, Arial, sans-serif
 $headingsFontWeight: normal
+$sansFontFamily: 'Lucida Grande', Helvetica, Arial, sans-serif
 $blue: #294283
 $linkColor: $blue
 $linkColorHover: $blue
@@ -88,8 +89,7 @@ a
 section
   margin-bottom: 2em
 
-// Holds the logout and admin links in the top-right corner
-// TODO conflicts with notifications (i.e. sits atop them)
+// Holds the login, logout, and admin links in the top-right corner
 .account_links_container
   text-align: right
   font-size: .8em
@@ -97,9 +97,12 @@ section
     color: #444
     font-family: $sansFontFamily
 
-// Bootstrap override
+// Bootstrap overrides
 .well
   background-color: rgba(255,255,255,0.5)
+blockquote
+  border-color: rgba(99, 79, 42, 0.4)
+  font-style: italic
 
 // Generic table layout
 .table
@@ -120,3 +123,8 @@ footer
   font-size: .75em
   font-style: italic
   color: #666
+
+.btn, button, input, select, textarea
+  font-family: $sansFontFamily
+  font-size: 14px
+  line-height: 18px
