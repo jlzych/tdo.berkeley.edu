@@ -8,12 +8,14 @@
 
   %body
     #main{ :role => 'main' }
-      - if user_signed_in?
-        %p.logout_container
+      %p.account_links_container
+        - if user_signed_in?
           - if current_user.admin?
-            =link_to('Admin', rails_admin_path, :class => 'rails_admin_path')
+            =link_to 'Admin', rails_admin_path, :class => 'rails_admin_path'
             |
-          =link_to('Logout', destroy_user_session_path, :method => :delete)
+          =link_to 'Logout', destroy_user_session_path, :method => :delete
+        - else
+          =link_to 'Login', new_user_session_path
 
       -if notice
         %p.alert.alert-info= notice
