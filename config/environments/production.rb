@@ -1,16 +1,7 @@
 TdoBerkeleyEdu::Application.configure do
   # Settings specified here will take precedence over those in config/application.rb
   config.action_mailer.default_url_options = { :host => 'tdo.berkeley.edu' }
-  config.action_mailer.delivery_method = :smtp
-  config.action_mailer.smtp_settings = {
-    :enable_starttls_auto => true,
-    :address => 'smtp.gmail.com',
-    :port => '587',
-    :authentication => :plain,
-    :domain => 'tdo.berkeley.edu',
-    :user_name => 'jlzych@gmail.com',
-    :password => 'ngtftisnmaedetqb'
-  }
+
   # Code is not reloaded between requests
   config.cache_classes = true
 
