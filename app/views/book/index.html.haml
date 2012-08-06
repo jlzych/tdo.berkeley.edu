@@ -29,7 +29,7 @@
   .shared_resources.table-cell.well
     %h2 Shared Resources
 
-    %ul.shared_resources
+    %ul.shared_resources_list
       -@shared_resources.each do |r|
         %li
           =link_to r.title, r.file.url
