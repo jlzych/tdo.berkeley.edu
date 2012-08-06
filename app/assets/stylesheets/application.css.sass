@@ -17,19 +17,7 @@
 
 @import compass
 @import "fonts"
-
-// Bootstrap overrides
-$baseFontSize: 17px
-$baseFontFamily: "Cardo", Georgia, "Times New Roman", serif
-$baseLineHeight: 25px
-$headingsFontFamily: "BebasNeueRegular", Impact, Helvetica, Arial, sans-serif
-$headingsFontWeight: normal
-$sansFontFamily: 'Lucida Grande', Helvetica, Arial, sans-serif
-$blue: #294283
-$linkColor: $blue
-$linkColorHover: $blue
-$btnPrimaryBackground: #08c
-
+@import "variables"
 @import "bootstrap"
 
 *
@@ -57,14 +45,18 @@ h1, h2, h3
   font-family: $headingsFontFamily
   font-weight: $headingsFontWeight
   line-height: 1.1em
-  margin: .4em 0
+  margin: 1.1em 0 .4em 0
   color: black
 
 // http://modularscale.com/scale/?px1=18&px2=56&ra1=1.5&ra2=0
 h1
   font-size: 3.1em
+  margin-top: 0
 h2
   font-size: 2.25em
+  // When it's at the first child of an element, get rid of its top margin
+  &:nth-child(1)
+    margin-top: .4em
 h3
   font-size: 1.5em
 
@@ -87,7 +79,7 @@ a
     text-decoration: none
 
 section
-  margin-bottom: 2em
+  margin-bottom: 1.5em
 
 // Holds the login, logout, and admin links in the top-right corner
 .account_links_container

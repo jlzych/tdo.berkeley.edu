@@ -144,7 +144,7 @@ RailsAdmin.config do |config|
 
     list do
       field :id
-      field :user_id
+      # field :user_id
       field :title
       field :file
       field :updated_at

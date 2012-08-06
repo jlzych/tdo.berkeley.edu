@@ -3,16 +3,15 @@
   .table
     .callout.table-cell
       .cover
-        %h3{ :style =>  'color: rgba(0,0,0,.5)'} Book Cover ... Coming Soon
+        %h3{ :style =>  'color: rgba(0,0,0,.5); margin-top: 0;'} Book Cover ... Coming Soon
 
     .about_text.table-cell{ :style => 'width: auto;' }
       %p
         We organize things, we organize information, we organize information about things, and we organize information about information. But even though &ldquo;organizing&rdquo; is a fundamental and ubiquitous challenge, when we compare these activities their contrasts are more apparent than their commonalities. We propose to unify many perspectives about organizing with the concept of an Organizing System, defined as
         %strong an intentionally arranged collection of resources and the interactions they support.
         Every Organizing System involves a collection of resources, a choice of properties or principles used to describe and arrange resources, and ways of supporting interactions with resources. By comparing and contrasting how these activities take place in different contexts and domains, we can identify patterns of organizing. We can create a discipline of organizing in a disciplined way.
-
-      %p=link_to 'Read more about the project &raquo;'.html_safe, about_path
-      %p
+        =link_to 'Read more about the project &raquo;'.html_safe, about_path, :class => 'read_more_link'
+      %p.calls_to_action
         =link_to 'Read chapter 1', 'assets/TDOChapter1.pdf', :class => 'btn btn-primary'
         =link_to 'Access the book online', book_index_path, :class => 'btn'
 
@@ -35,50 +34,48 @@
 
 %section#authors.authors
   %h2 I School Faculty Contributors
-  .author_row
-    .author
-      %h3 Robert J. Glushko
-      %p
-        =link_to 'Bob Glushko', 'http://people.ischool.berkeley.edu/~glushko/'
-        is an Adjunct Full Professor at UC Berkeley's School of Information.  He conceived of and leads the Discipline of Organizing project, is the first author of many chapters, and serves as the overall technical editor.
+  .faculty_contributors
+    %h3 Robert J. Glushko
+    %p
+      =link_to 'Bob Glushko', 'http://people.ischool.berkeley.edu/~glushko/'
+      is an Adjunct Full Professor at UC Berkeley's School of Information.  He conceived of and leads the Discipline of Organizing project, is the first author of many chapters, and serves as the overall technical editor.
 
-    .author
-      %h3 Vivien Petras
+    %h3 Vivien Petras
+    %p
       =link_to 'Vivien Petras', 'http://www.ibi.hu-berlin.de/institut/personen/petras'
       is on the faculty at the Institut für Bibliotheks- und Informationswissenschaft, Humboldt-Universitat zu Berlin
 
-  .author_row
-    .author
-      %h3 Ryan Shaw
+    %h3 Ryan Shaw
+    %p
       =link_to 'Ryan Shaw', 'http://aeshin.org/'
       is an assistant professor in the School of Information and Library Science at the University of North Carolina at Chapel Hill
 
-  %h2 Other Contributors
+  .other_contributors
+    %h3 Other Contributors
 
-  .table
-    .table-cell{ :style => 'width: 33%' }
-      %p Andrea Angquist
-      %p Rachelle Annechino
-      %p J. J. M. Ekaterin
-      %p Ryan Greenberg
-      %p Philip Foeckler
-      %p Jess Hemerly
-      %p Eliot Kimber
-      %p Murray Maloney
+    .table
+      .table-cell
+        %p Andrea Angquist
+        %p Rachelle Annechino
+        %p J. J. M. Ekaterin
+        %p=link_to 'Ryan Greenberg', 'http://ryangreenberg.com'
+        %p Philip Foeckler
+        %p Jess Hemerly
+        %p Eliot Kimber
+        %p Murray Maloney
+        %p Michael Manoochehri
+        %p Matt Mayernik
+        %p Kimra McPherson
 
-    .table-cell{ :style => 'width: 33%' }
-      %p Michael Manoochehri
-      %p Matt Mayernik
-      %p Kimra McPherson
-      %p Elliot Nahman
-      %p Karen Nomorosa
-      %p Alberto Pepe
-      %p Jacob Portnoff
-
-    .table-cell
-      %p Bryan Rea
-      %p Daniel Turner
-      %p Longhao Wang
-      %p=link_to 'Erik Wilde', 'http://dret.net/netdret/'
-      %p=link_to 'Anne Wootton', 'http://popuparchive.org/'
-      %p=link_to 'Jeff Zych', 'http://jlzych.com'
+      .table-cell
+        %p Elliot Nahman
+        %p Karen Nomorosa
+        %p Alberto Pepe
+        %p Jacob Portnoff
+        %p Bryan Rea
+        %p Daniel Turner
+        %p=link_to 'Jen Wang', 'http://dominantprimordialbeast.com/'
+        %p Longhao Wang
+        %p=link_to 'Erik Wilde', 'http://dret.net/netdret/'
+        %p=link_to 'Anne Wootton', 'http://popuparchive.org/'
+        %p=link_to 'Jeff Zych', 'http://jlzych.com'
