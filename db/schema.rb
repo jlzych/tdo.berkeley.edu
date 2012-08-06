@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120712202354) do
+ActiveRecord::Schema.define(:version => 20120803190034) do
 
   create_table "rails_admin_histories", :force => true do |t|
     t.text     "message"
@@ -24,6 +24,19 @@ ActiveRecord::Schema.define(:version => 20120712202354) do
   end
 
   add_index "rails_admin_histories", ["item", "table", "month", "year"], :name => "index_rails_admin_histories"
+
+  create_table "shared_resources", :force => true do |t|
+    t.string   "title"
+    t.integer  "user_id"
+    t.string   "file_content_type"
+    t.string   "file_file_name"
+    t.datetime "file_updated_at"
+    t.integer  "file_file_size"
+    t.datetime "created_at",        :null => false
+    t.datetime "updated_at",        :null => false
+  end
+
+  add_index "shared_resources", ["user_id"], :name => "index_shared_resources_on_user_id"
 
   create_table "users", :force => true do |t|
     t.string   "email",                  :default => "",    :null => false

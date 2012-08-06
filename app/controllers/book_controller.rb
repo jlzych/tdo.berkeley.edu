@@ -1,6 +1,10 @@
 class BookController < ApplicationController
   before_filter :authenticate_user!
 
+  def index
+    @shared_resources = SharedResource.all # TODO: Paginate?
+  end
+
   def show
     @id = params[:id]
   end

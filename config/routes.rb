@@ -11,6 +11,9 @@ TdoBerkeleyEdu::Application.routes.draw do
   resources :book, :only => [:index, :show]
   match 'book/chapter/:id' => 'book#chapter', :via => :get, :as => :book_chapter
 
+  # Shared resources
+  match '/shared_resources/:id/:filename' => 'shared_resource#download', :via => :get
+
   resources :user
 
   # Admin routes

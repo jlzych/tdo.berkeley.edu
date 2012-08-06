@@ -138,4 +138,26 @@ RailsAdmin.config do |config|
     # create do; end
     # update do; end
   end
+
+  config.model SharedResource do
+    object_label_method :title
+
+    list do
+      field :id
+      field :user_id
+      field :title
+      field :file
+      field :updated_at
+    end
+
+    edit do
+      field :title
+      field :file, :paperclip
+      field :user_id, :hidden do
+        default_value do
+          bindings[:view]._current_user.id
+        end
+      end
+    end
+  end
 end

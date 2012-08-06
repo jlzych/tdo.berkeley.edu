@@ -16,3 +16,6 @@
 
 # Exclude database.yml because it contains plaintext pw
 /config/database.yml
+
+# Paperclip's uploaded files
+/app/assets/shared_resources/

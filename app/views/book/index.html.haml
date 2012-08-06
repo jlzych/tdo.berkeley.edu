@@ -28,9 +28,13 @@
 
   .shared_resources.table-cell.well
     %h2 Shared Resources
-    %p{ :style => 'color: #666; font-style: italic;' } More lecture notes, recordings, assignments, and other content will be coming soon.
 
-    =link_to "Overview of Discipline of Organizing (Glushko presentation May 2012)", "assets/TDO-Introduction.pdf"
+    %ul.shared_resources
+      -@shared_resources.each do |r|
+        %li
+          =link_to r.title, r.file.url
+
+    -# =link_to "Overview of Discipline of Organizing (Glushko presentation May 2012)", "assets/TDO-Introduction.pdf"
     -# %ul
       -# %li
         -# Also .icon-picture, .icon-music OR .icon-headphones, .icon-film
