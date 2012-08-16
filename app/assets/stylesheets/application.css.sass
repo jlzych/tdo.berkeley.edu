@@ -81,6 +81,10 @@ a
 section
   margin-bottom: 1.5em
 
+// Border top to separate sections from each other
+.separate
+  border-top: 2px solid $darkerSepia
+
 // Holds the login, logout, and admin links in the top-right corner
 .account_links_container
   text-align: right
@@ -91,7 +95,11 @@ section
 
 // Bootstrap overrides
 .well
-  background-color: rgba(255,255,255,0.5)
+  background-color: $darkerSepia
+  padding: 1.5em
+  & :first-child
+    margin-top: 0
+
 blockquote
   border-color: rgba(99, 79, 42, 0.4)
   font-style: italic
@@ -104,6 +112,20 @@ blockquote
 .table-cell
   display: table-cell
   width: 50% // Default width
+
+// Generic sitewide columns
+.col
+  display: inline-block
+  margin: 0
+  padding-bottom: 1em
+  padding-right: 1em
+  vertical-align: top
+  width: 49% // Default width
+
+// Lists
+ul, li
+  list-style-position: inside
+  margin: 0
 
 // Forms
 form .btn

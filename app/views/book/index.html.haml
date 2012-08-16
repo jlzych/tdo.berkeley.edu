@@ -11,32 +11,42 @@
 
 %p We are developing ebook versions of these chapters, and we also invite you to send us images, videos, news items, or other content for possible incorporation in the ebooks.
 
-#resources_container.table
-  .chapters.table-cell.well
-    %h2 Chapters
-    %ol
-      %li=link_to 'Foundations for Organizing Systems', book_chapter_path(1)
-      %li=link_to 'Activities in Organizing Systems', book_chapter_path(2)
-      %li=link_to 'Resources in Organizing Systems', book_chapter_path(3)
-      %li=link_to 'Resource Description and Metadata', book_chapter_path(4)
-      %li=link_to 'Describing Relationships and Structures', book_chapter_path(5)
-      %li=link_to 'Categorization:  Describing Resource Classes and Types', book_chapter_path(6)
-      %li Classification:  Assigning Resources to Categories
-      %li The Forms of Resource Descriptions
-      %li Interactions with Resources
-      %li A Roadmap for Organizing Systems
+%section#chapters.separate
+  %h2 Chapters
+  %ol.col
+    %li=link_to 'Foundations for Organizing Systems', book_chapter_path(1)
+    %li=link_to 'Activities in Organizing Systems', book_chapter_path(2)
+    %li=link_to 'Resources in Organizing Systems', book_chapter_path(3)
+    %li=link_to 'Resource Description and Metadata', book_chapter_path(4)
+    %li=link_to 'Describing Relationships and Structures', book_chapter_path(5)
 
-  .shared_resources.table-cell.well
-    %h2 Shared Resources
+  %ol.col{ :start => '6' }
+    %li=link_to 'Categorization:  Describing Resource Classes and Types', book_chapter_path(6)
+    %li Classification:  Assigning Resources to Categories
+    %li The Forms of Resource Descriptions
+    %li Interactions with Resources
+    %li A Roadmap for Organizing Systems
 
-    %ul.shared_resources_list
-      -@shared_resources.each do |r|
+%section#shared_resources.separate
+  %h2 Shared Resources
+
+  %ul.shared_resources_list.col
+    -@shared_resources.each do |r|
+      %li
+        =link_to r.title, r.file.url
+
+  -# =link_to "Overview of Discipline of Organizing (Glushko presentation May 2012)", "assets/TDO-Introduction.pdf"
+  -# %ul
+    -# %li
+      -# Also .icon-picture, .icon-music OR .icon-headphones, .icon-film
+      -# %i.icon-file
+      -# =link_to 'Lecture Notes', '#'
+
+  .tweets.col.well
+    %h3 Tweets
+    %ul
+      -Twitter.search('#html5 OR #tdofix -rt', :rpp => 10).results.each do |t|
         %li
-          =link_to r.title, r.file.url
-
-    -# =link_to "Overview of Discipline of Organizing (Glushko presentation May 2012)", "assets/TDO-Introduction.pdf"
-    -# %ul
-      -# %li
-        -# Also .icon-picture, .icon-music OR .icon-headphones, .icon-film
-        -# %i.icon-file
-        -# =link_to 'Lecture Notes', '#'
+          =image_tag t.profile_image_url
+          = t.text
+          .byline= "Tweeted by #{t.from_user_name} on #{t.created_at.to_s(:short)}"

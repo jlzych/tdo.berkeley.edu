@@ -1,15 +1,17 @@
 // This is dumb - importing twice
 @import "variables"
-@import "compass"
 
-.callout
-  width: 14em
 .cover
-  background-color: rgba(99, 79, 42, 0.4)
-  height: 17em
+  float: left
+  margin-right: 1em
+  width: 240px
+  img
+    width: 240px
 .about_text
-  padding-left: 1em
+  // padding-left: 1em
   text-align: justify
+  vertical-align: top
+  width: auto
 .read_more_link
   float: right
   font-family: $sansFontFamily
@@ -26,22 +28,7 @@
   font-size: .8em
   font-style: italic
   color: #666
-// On homepage
-.toc
-  border-top: 2px solid $darkerSepia
 
 // Faculty advisors on home page
-.authors
-  border-top: 2px solid $darkerSepia
-  width: 100%
-  .faculty_contributors, .other_contributors
-    display: inline-block
-    width: 49%
-    padding-right: 1em
-    vertical-align: top
-  .other_contributors
-    padding-left: 1.5em
-    padding-right: 0
-    background-color: $darkerSepia
-    +border-radius(4px)
-    +box-shadow(inset 0 1px 1px rgba(0, 0, 0, 0.05))
+.other_contributors
+  padding-right: 0

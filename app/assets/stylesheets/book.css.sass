@@ -1,19 +1,17 @@
-// Contains chapters and shared resources
-#resources_container
-  border-spacing: 1em 0
-  margin-left: -1em
+@import "compass/css3/hyphenation"
 
-.chapters, .shared_resources
-  width: 50%
-  h2
-    margin-top: 0
-
-.chapters
-  padding-right: 1em
-
-// .shared_resources ul
-  // list-style: none
-  // margin-left: .5em
+.tweets
+  ul
+    margin: 0
+    li
+      list-style: none
+      margin-bottom: 1em
+      +hyphenation // Prevent poorly formatted tweets from breaking layout
+      img
+        float: left
+        padding-right: .5em
+      .byline
+        display: block
 
 // Comments
 .comment_input

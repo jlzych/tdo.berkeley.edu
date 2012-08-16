@@ -1,40 +1,39 @@
-%section#about.about
-  %h1 The Discipline of Organizing
-  .table
-    .callout.table-cell
-      .cover
-        %h3{ :style =>  'color: rgba(0,0,0,.5); margin-top: 0;'} Book Cover ... Coming Soon
 
-    .about_text.table-cell{ :style => 'width: auto;' }
-      %p
-        We organize things, we organize information, we organize information about things, and we organize information about information. But even though &ldquo;organizing&rdquo; is a fundamental and ubiquitous challenge, when we compare these activities their contrasts are more apparent than their commonalities. We propose to unify many perspectives about organizing with the concept of an Organizing System, defined as
-        %strong an intentionally arranged collection of resources and the interactions they support.
-        Every Organizing System involves a collection of resources, a choice of properties or principles used to describe and arrange resources, and ways of supporting interactions with resources. By comparing and contrasting how these activities take place in different contexts and domains, we can identify patterns of organizing. We can create a discipline of organizing in a disciplined way.
-        =link_to 'Read more about the project &raquo;'.html_safe, about_path, :class => 'read_more_link'
-      %p.calls_to_action
-        =link_to 'Read chapter 1', 'assets/TDOChapter1.pdf', :class => 'btn btn-primary'
-        =link_to 'Access the book online', book_index_path, :class => 'btn'
+%h1 The Discipline of Organizing
+%section#about.about.table
+  .cover.table-cell
+    =image_tag 'cover.png'
 
-%section#toc.toc
+  .about_text.table-cell
+    %p
+      We organize things, we organize information, we organize information about things, and we organize information about information. But even though &ldquo;organizing&rdquo; is a fundamental and ubiquitous challenge, when we compare these activities their contrasts are more apparent than their commonalities. We propose to unify many perspectives about organizing with the concept of an Organizing System, defined as
+      %strong an intentionally arranged collection of resources and the interactions they support.
+      Every Organizing System involves a collection of resources, a choice of properties or principles used to describe and arrange resources, and ways of supporting interactions with resources. By comparing and contrasting how these activities take place in different contexts and domains, we can identify patterns of organizing. We can create a discipline of organizing in a disciplined way.
+
+      =link_to 'Read more about the project &raquo;'.html_safe, about_path, :class => 'read_more_link'
+
+    %p.calls_to_action
+      =link_to 'Read chapter 1', 'assets/TDOChapter1.pdf', :class => 'btn btn-primary'
+      =link_to 'Access the book and shared resources', book_index_path, :class => 'btn'
+
+%section#toc.toc.separate
   %h2 Table of Contents
-  .table-cell
-    %ol
-      %li Foundations for Organizing Systems
-      %li Activities in Organizing Systems
-      %li Resources in Organizing Systems
-      %li Resource Description and Metadata
-      %li Describing Relationships and Structures
-  .table-cell
-    %ol{ :start => '6' }
-      %li Categorization:  Describing Resource Classes and Types
-      %li Classification:  Assigning Resources to Categories
-      %li The Forms of Resource Descriptions
-      %li Interactions with Resources
-      %li A Roadmap for Organizing Systems
+  %ol.col
+    %li Foundations for Organizing Systems
+    %li Activities in Organizing Systems
+    %li Resources in Organizing Systems
+    %li Resource Description and Metadata
+    %li Describing Relationships and Structures
+  %ol.col{ :start => '6' }
+    %li Categorization:  Describing Resource Classes and Types
+    %li Classification:  Assigning Resources to Categories
+    %li The Forms of Resource Descriptions
+    %li Interactions with Resources
+    %li A Roadmap for Organizing Systems
 
-%section#authors.authors
+%section#authors.authors.separate
   %h2 I School Faculty Contributors
-  .faculty_contributors
+  .faculty_contributors.col
     %h3 Robert J. Glushko
     %p
       =link_to 'Bob Glushko', 'http://people.ischool.berkeley.edu/~glushko/'
@@ -50,7 +49,7 @@
       =link_to 'Ryan Shaw', 'http://aeshin.org/'
       is an assistant professor in the School of Information and Library Science at the University of North Carolina at Chapel Hill
 
-  .other_contributors
+  .other_contributors.col.well
     %h3 Other Contributors
 
     .table

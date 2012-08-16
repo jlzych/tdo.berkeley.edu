@@ -35,6 +35,7 @@ gem 'devise'
 gem 'fastercsv' # Only with Ruby 1.8
 gem 'rails_admin'
 gem 'paperclip', '~> 2.0'
+gem 'twitter', '~> 3.6.0'
 
 # To use ActiveModel has_secure_password
 # gem 'bcrypt-ruby', '~> 3.0.0'
