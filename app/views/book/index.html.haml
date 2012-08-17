@@ -45,7 +45,7 @@
   .tweets.col.well
     %h3 Tweets
     %ul
-      -Twitter.search('#html5 OR #tdoexample -rt', :rpp => 10).results.each do |t|
+      -Twitter.search('#tdofix OR #tdoexample -rt', :rpp => 10).results.each do |t|
         %li
           %a.tweet{ :href => "http://twitter.com/#{t.from_user}/status/#{t.id}", :target => '_blank' }
             =image_tag t.profile_image_url
