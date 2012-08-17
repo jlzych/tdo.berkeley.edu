@@ -45,8 +45,12 @@
   .tweets.col.well
     %h3 Tweets
     %ul
-      -Twitter.search('#html5 OR #tdofix -rt', :rpp => 10).results.each do |t|
+      -Twitter.search('#html5 OR #tdoexample -rt', :rpp => 10).results.each do |t|
         %li
-          =image_tag t.profile_image_url
-          = t.text
-          .byline= "Tweeted by #{t.from_user_name} on #{t.created_at.to_s(:short)}"
+          %a.tweet{ :href => "http://twitter.com/#{t.from_user}/status/#{t.id}", :target => '_blank' }
+            =image_tag t.profile_image_url
+            =t.text
+          .byline
+            Tweeted by
+            =link_to t.from_user_name, "http://twitter.com/#{t.from_user}", :class => 'profile_link', :target => '_blank'
+            ="on #{t.created_at.to_s(:short)}"

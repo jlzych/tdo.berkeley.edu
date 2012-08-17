@@ -1,4 +1,5 @@
 @import "compass/css3/hyphenation"
+@import "variables"
 
 .tweets
   ul
@@ -12,6 +13,21 @@
         padding-right: .5em
       .byline
         display: block
+  // Styles the tweet itself, which links to the original tweet
+  .tweet
+    color: $textColor
+    text-decoration: none
+
+    &:hover
+      color: inherit
+      text-decoration: underline
+
+  // Link to the user's profile
+  .profile_link
+    color: $bylineGray
+    text-decoration: none
+    &:hover
+      text-decoration: underline
 
 // Comments
 .comment_input
