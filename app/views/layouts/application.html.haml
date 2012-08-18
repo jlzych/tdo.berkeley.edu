@@ -4,6 +4,7 @@
     %title The Discipline of Organizing
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
+    = yield :javascripts
     = csrf_meta_tags
 
   %body

@@ -1,3 +1,6 @@
+- content_for :javascripts do
+  = javascript_include_tag "book"
+
 %h1=link_to 'The Discipline of Organizing', root_path
 
 %p
@@ -44,13 +47,8 @@
 
   .tweets.col.well
     %h3 Tweets
-    %ul
-      -Twitter.search('#tdofix OR #tdoexample -rt', :rpp => 10).results.each do |t|
-        %li
-          %a.tweet{ :href => "http://twitter.com/#{t.from_user}/status/#{t.id}", :target => '_blank' }
-            =image_tag t.profile_image_url
-            =t.text
-          .byline
-            Tweeted by
-            =link_to t.from_user_name, "http://twitter.com/#{t.from_user}", :class => 'profile_link', :target => '_blank'
-            ="on #{t.created_at.to_s(:short)}"
+    %p.explanatory_text Following #tdoexample and #tdofix
+    %ul#tweets_list
+    -# Loaded via JS - see book.js.coffee
+    %p
+      =link_to 'Load more tweets', '#', :class => 'load_more_tweets_link'

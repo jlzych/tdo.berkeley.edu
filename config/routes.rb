@@ -8,6 +8,9 @@ TdoBerkeleyEdu::Application.routes.draw do
   devise_for :users
 
   match 'book/syllabus' => 'book#syllabus', :via => :get, :as => :syllabus
+  # To load tweets
+  match 'book/tweets' => 'book#tweets', :via => :get, :as => :tweets
+
   resources :book, :only => [:index, :show]
   match 'book/chapter/:id' => 'book#chapter', :via => :get, :as => :book_chapter
 
