@@ -4,7 +4,6 @@
     %title The Discipline of Organizing
     = stylesheet_link_tag    "application", :media => "all"
     = javascript_include_tag "application"
-    = yield :javascripts
     = csrf_meta_tags
 
   %body
@@ -28,6 +27,7 @@
 
       = yield
 
+    = yield :javascripts
     :javascript
       var _gaq = _gaq || [];
       _gaq.push(['_setAccount', 'UA-33697591-1']);
